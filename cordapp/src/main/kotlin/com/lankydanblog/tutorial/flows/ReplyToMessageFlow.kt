@@ -5,11 +5,11 @@ import com.lankydanblog.tutorial.states.MessageState
 import net.corda.core.contracts.StateAndRef
 import net.corda.core.flows.FlowLogic
 import net.corda.core.flows.InitiatingFlow
-import net.corda.core.flows.StartableByRPC
+import net.corda.core.flows.StartableByService
 import net.corda.core.transactions.SignedTransaction
 
 @InitiatingFlow
-@StartableByRPC
+@StartableByService
 class ReplyToMessageFlow(private val message: StateAndRef<MessageState>) : FlowLogic<SignedTransaction>() {
 
   @Suspendable

@@ -114,6 +114,6 @@ Please take a moment to bask in the glory of the pun I made in this sections hea
 
 In conclusion, using `trackBy` in a Corda Service is perfect for starting off new processes based on information being saved to the node. But, you need to be careful when starting new Flows from a `trackBy` observable. This is due to the observable holding onto a Flow Worker thread and therefore a spot in the queue. If your throughput reaches higher numbers, you risk the chance of your node deadlocking. You could end up in a situation where the queue is blocked by threads that are all waiting for a Flow to finish but with no actual Flows in the queue. By moving the Flow invocations onto a separate thread from the observable thread. You allow the once held spot on the queue to be released. There is now no chance of your `trackBy` code causing deadlock.
 
-The code used in this post can be found on my [GitHub](URL).
+The code used in this post can be found on my [GitHub](https://github.com/lankydan/corda-service-trackby-flows).
 
 If you found this post helpful, you can follow me on Twitter at [@LankyDanDev](http://www.twitter.com/LankyDanDev) to keep up with my new posts.

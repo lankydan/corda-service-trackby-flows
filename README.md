@@ -1,6 +1,6 @@
 # Corda Services
 
-This project focuses on using a Corda service inside of a Flow. The blog post written with this code contains extra information that the code does not contain.
+This project focuses on using `ServiceHub.trackBy` to observe the saving of states and how to do so without causing deadlock.
 
 # Structure:
 
