@@ -2,6 +2,8 @@
 
 This project focuses on using `ServiceHub.trackBy` to observe the saving of states and how to do so without causing deadlock.
 
+The blog post that explains the code used here can be found at [www.lankydanblog.com](https://lankydanblog.com/2018/10/05/starting-flows-with-trackby/)
+
 # Structure:
 
 * app: Spring code
